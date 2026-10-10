@@ -82,6 +82,11 @@ it from Hyprland keybindings through Quickshell IPC.
 > The installer sets up **the island only**, not the whole rice. The other
 > dotfiles are there for you to read and adapt.
 
+> **Before installing:** this repository does not set up a complete desktop or
+> window-manager environment. It is designed for Hyprland, so install and
+> configure Hyprland first. The island installer will not make the desktop
+> usable on its own.
+
 **Requirements**
 
 - Arch Linux with Hyprland
