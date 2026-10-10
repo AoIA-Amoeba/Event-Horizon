@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 4,
+    "fixed-center": true,
+    "exclusive": true,
+
+    "modules-left": ["custom/avatar", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/cava", "pulseaudio", "network", "battery", "clock", "custom/power"],
+
+    "custom/avatar": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        },
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+            "*": 10
+        }
+    },
+
+    "custom/cava": {
+        "exec": "cava -p ~/.config/cava/config | sed 's/;//g' | head -20",
+        "interval": 0,
+        "format": "{}",
+        "max-length": 20,
+        "on-click": "pavucontrol"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": " Disconnected",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "powerprofilesctl launch"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%A, %B %d %Y}",
+        "on-click": "gnome-calendar"
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout -b 4 -c ~/.config/wlogout/config -l ~/.config/wlogout/layout",
+        "tooltip": false
+    }
+}

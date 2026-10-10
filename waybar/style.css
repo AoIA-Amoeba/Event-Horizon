@@ -1,0 +1,124 @@
+/* Waybar - Black Hole Rice */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "IosevkaTerm Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(10, 13, 26, 0.85);
+    border-radius: 12px;
+    border: 1px solid rgba(143, 196, 255, 0.2);
+    color: #dfe6f5;
+    margin: 4px 8px 0px 8px;
+    padding: 0 12px;
+}
+
+/* Left modules */
+#custom-avatar {
+    background-color: rgba(143, 196, 255, 0.15);
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#window {
+    color: #dfe6f5;
+    padding: 0 12px;
+    margin: 4px 0;
+}
+
+/* Center modules */
+#workspaces {
+    margin: 4px 0;
+}
+
+#workspaces button {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #8a92a8;
+    padding: 0 8px;
+    margin: 0 2px;
+    font-size: 14px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(143, 196, 255, 0.1);
+    color: #dfe6f5;
+}
+
+#workspaces button.active {
+    background-color: rgba(143, 196, 255, 0.25);
+    color: #8fc4ff;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(255, 138, 76, 0.3);
+    color: #ff8a4c;
+}
+
+/* Right modules */
+#cava {
+    color: #8fc4ff;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#pulseaudio {
+    color: #dfe6f5;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#pulseaudio.muted {
+    color: #f87171;
+}
+
+#network {
+    color: #dfe6f5;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#network.disconnected {
+    color: #f87171;
+}
+
+#battery {
+    color: #dfe6f5;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#battery.warning {
+    color: #fbbf24;
+}
+
+#battery.critical {
+    color: #f87171;
+}
+
+#battery.charging {
+    color: #4ade80;
+}
+
+#clock {
+    color: #dfe6f5;
+    padding: 0 8px;
+    margin: 4px 0;
+}
+
+#custom-power {
+    background-color: rgba(143, 196, 255, 0.15);
+    border-radius: 8px;
+    color: #8fc4ff;
+    padding: 0 10px;
+    margin: 4px 0;
+}
+
+#custom-power:hover {
+    background-color: rgba(143, 196, 255, 0.3);
+}

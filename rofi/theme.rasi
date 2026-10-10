@@ -1,0 +1,128 @@
+/* Rofi - Black Hole Rice */
+
+* {
+    bg: #0a0d1a;
+    bg-alt: rgba(10, 13, 26, 0.85);
+    fg: #dfe6f5;
+    fg-alt: #8a92a8;
+
+    accent: #8fc4ff;
+    accent-light: #cfe6ff;
+    ember: #ff8a4c;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    width: 800;
+    height: 500;
+    border: 2px;
+    border-color: rgba(143, 196, 255, 0.3);
+    border-radius: 16px;
+    background-color: rgba(10, 13, 26, 0.9);
+    padding: 0;
+}
+
+mainbox {
+    padding: 0;
+    spacing: 0;
+}
+
+inputbar {
+    padding: 16px 20px;
+    spacing: 12px;
+    background-color: rgba(10, 13, 26, 0.95);
+    border-radius: 14px 14px 0 0;
+    border-bottom: 1px solid rgba(143, 196, 255, 0.15);
+}
+
+prompt {
+    font: "JetBrainsMono Nerd Font 14";
+    color: @accent;
+    background-color: transparent;
+}
+
+entry {
+    font: "JetBrainsMono Nerd Font 12";
+    color: @fg;
+    background-color: rgba(143, 196, 255, 0.08);
+    border-radius: 8px;
+    padding: 8px 12px;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    padding: 12px 16px;
+    spacing: 4px;
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    fixed-height: false;
+    dynamic: true;
+}
+
+element {
+    padding: 8px 12px;
+    spacing: 12px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 12";
+    color: @fg;
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: rgba(143, 196, 255, 0.2);
+    text-color: @accent-light;
+}
+
+element selected.active {
+    background-color: rgba(143, 196, 255, 0.3);
+    text-color: @accent-light;
+}
+
+mode-switcher {
+    spacing: 8px;
+    padding: 12px 16px;
+    background-color: rgba(10, 13, 26, 0.95);
+    border-radius: 0 0 14px 14px;
+    border-top: 1px solid rgba(143, 196, 255, 0.15);
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @fg-alt;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+button selected {
+    background-color: rgba(143, 196, 255, 0.25);
+    text-color: @accent;
+}
+
+message {
+    background-color: transparent;
+    padding: 8px;
+}
+
+textbox {
+    color: @fg-alt;
+    font: "JetBrainsMono Nerd Font 10";
+}

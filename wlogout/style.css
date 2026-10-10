@@ -1,0 +1,46 @@
+/* wlogout - Black Hole Rice */
+
+window {
+    background-color: rgba(10, 13, 26, 0.95);
+    border-radius: 16px;
+    border: 2px solid rgba(143, 196, 255, 0.3);
+}
+
+button {
+    background-color: rgba(143, 196, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(143, 196, 255, 0.2);
+    color: #dfe6f5;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    padding: 20px 30px;
+    margin: 8px;
+    min-width: 120px;
+    min-height: 80px;
+}
+
+button:hover {
+    background-color: rgba(143, 196, 255, 0.25);
+    border-color: rgba(143, 196, 255, 0.5);
+}
+
+button:focus {
+    background-color: rgba(143, 196, 255, 0.3);
+    border-color: #8fc4ff;
+}
+
+#lock {
+    color: #8fc4ff;
+}
+
+#logout {
+    color: #fbbf24;
+}
+
+#reboot {
+    color: #ff8a4c;
+}
+
+#shutdown {
+    color: #f87171;
+}

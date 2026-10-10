@@ -1,0 +1,28 @@
+{
+    "buttons": {
+        "lock": {
+            "label": "Lock",
+            "action": "hyprlock",
+            "icon": "lock.png",
+            "keybind": "l"
+        },
+        "logout": {
+            "label": "Logout",
+            "action": "hyprctl dispatch exit 0",
+            "icon": "logout.png",
+            "keybind": "e"
+        },
+        "reboot": {
+            "label": "Reboot",
+            "action": "systemctl reboot",
+            "icon": "reboot.png",
+            "keybind": "r"
+        },
+        "shutdown": {
+            "label": "Shutdown",
+            "action": "systemctl poweroff",
+            "icon": "shutdown.png",
+            "keybind": "s"
+        }
+    }
+}

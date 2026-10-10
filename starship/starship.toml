@@ -1,0 +1,73 @@
+# Starship - Black Hole Rice
+
+format = """
+[](#8fc4ff)$os[](#8a92a8)\
+$username\
+[](#8a92a8)\
+$directory\
+[](#8a92a8)\
+$git_branch\
+$git_status\
+[](#8a92a8)\
+$python\
+$nodejs\
+$rust\
+$golang\
+[](#8a92a8)\
+$cmd_duration\
+[](#8a92a8)\
+$line_break\
+[](#8fc4ff)$character"""
+
+[character]
+success_symbol = "[❯](#8fc4ff)"
+error_symbol = "[❯](#f87171)"
+
+[username]
+style_user = "bold #8fc4ff"
+style_root = "bold #f87171"
+format = "[$user]($style)"
+show_always = true
+
+[directory]
+style = "bold #cfe6ff"
+format = "[$path]($style)[$read_only]($read_only_style)"
+read_only = " "
+truncation_length = 3
+truncation_symbol = ".../"
+
+[git_branch]
+style = "bold #ff8a4c"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #fbbf24"
+format = '([$all_status$ahead_behind]($style) )'
+
+[python]
+style = "bold #4ade80"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+style = "bold #4ade80"
+format = "[$symbol$version]($style) "
+
+[rust]
+style = "bold #ff8a4c"
+format = "[$symbol$version]($style) "
+
+[golang]
+style = "bold #22d3ee"
+format = "[$symbol$version]($style) "
+
+[cmd_duration]
+style = "bold #8a92a8"
+format = "[$duration]($style) "
+
+[os]
+style = "bold #8fc4ff"
+disabled = false
+
+[os.symbols]
+Arch = " "
+EndeavourOS = " "
